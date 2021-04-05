@@ -13,7 +13,7 @@ namespace WebEmployee.Center
         //+++++++++++++++++++++++++++++ 
         private string _tServer = "localhost";
         private string _tDatabase = "Employee";
-        private string _tAdmin_User = "banbansoft";
+        private string _tAdmin_User = "";
         private string _tPassword = "";
         //DB
         SqlCommand sqlCom;
