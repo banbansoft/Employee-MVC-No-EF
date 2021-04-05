@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<Employees>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "AddEmployees")
+    </p>
+    <br />
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Code</td>
+                <td>@employee.Name</td>
+                <td>@employee.Salary</td>
+                <td>
+                    @Html.ActionLink("Edit", "SearchEmployees", employee) |
+                    @Html.ActionLink("Delete", "DeleteEmployees", new { id = employee.Code })
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

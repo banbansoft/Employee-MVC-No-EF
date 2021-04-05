@@ -1,0 +1,40 @@
+﻿
+@model Employees
+
+@using (Html.BeginForm("SaveEmployees", "Employees"))
+{
+<table class="table-condensed">
+    <tr>
+        <td>
+            <span>Code:</span>
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.Code)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span>Name:</span>
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.Name)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span>Salary:</span>
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.Salary)
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <button value="submit" class="btn btn-primary" title="submit">Save</button>
+        </td>
+    </tr>
+</table>
+}
+    <div>
+        @Html.ActionLink("Back to List", "ViewEmployees")
+    </div>
