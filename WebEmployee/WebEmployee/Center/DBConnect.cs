@@ -14,7 +14,7 @@ namespace WebEmployee.Center
         private string _tServer = "localhost";
         private string _tDatabase = "Employee";
         private string _tAdmin_User = "banbansoft";
-        private string _tPassword = "000069";
+        private string _tPassword = "";
         //DB
         SqlCommand sqlCom;
         public void Cpv_Connect()
